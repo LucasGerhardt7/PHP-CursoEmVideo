@@ -20,7 +20,7 @@
             <label for="dividendo">Dividento</label>
             <input type="number" name="dividendo" value="<?=$dividendo?>">
             <label for="divisor">Divisor</label>
-            <input type="number" name="divisor" value="<?=$divisor?>">
+            <input type="number" name="divisor" min="1" value="<?=$divisor?>">
             <input type="submit" value="Analisar">
         </form>
     </main>
@@ -30,9 +30,18 @@
             echo "<p>Dividendo = $dividendo</p>";
             echo "<p>Divisor = $divisor</p>";
             echo "<p>Resultado = $resultado</p>";
-            echo "<p>Resto = $resto</p>";
-        
+            echo "<p>Resto = $resto</p>";        
         ?>
+        <table class="divisao">
+            <tr>
+                <td><?=$dividendo?></td>
+                <td><?=$divisor?></td>
+            </tr>
+            <tr>
+                <td><?=$resto?></td>
+                <td><?=$resultado?></td>
+            </tr>
+        </table>
     </section>
 </body>
 </html>
